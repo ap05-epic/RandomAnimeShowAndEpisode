@@ -27,7 +27,7 @@ public class main {
         Thread.sleep(2000);
         //System.out.println("\nNow opening a random episode in 5 seconds)");
         System.out.println("\nNow opening episode: " + randomEpsN + "/" + NumOfEps(EpisodeFinderM) /*+  " in 5 seconds)"*/);
-        Thread.sleep(5000);
+        Thread.sleep(2500);
         opener(URL());
 
 

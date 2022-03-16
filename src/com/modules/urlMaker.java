@@ -17,16 +17,23 @@ public class urlMaker {
 
         String url = NameOfShow(EpisodeFinderM).toLowerCase(Locale.ROOT);
 
+        url = url.replace(": "," ");
+        url = url.replace(" - "," ");
+        url = url.replace("!","");
+        url = url.replace(".  ","");
+        url = url.replace("","");
         url = url.replace(":"," ");
         url = url.replace(","," ");
         url = url.replace("high-school","highschool");
         url = url.replace(" - ","");
         url = url.replace("."," ");
+        url = url.replace("re-zero","rezero");
+        url = url.replace("","");
         url = url.replace("","");
         url = url.replace("","");
         url = url.replace(" ","-");
         url = url.replace("IS--","");
-        url = url.replace("","");
+        url = url.replace("?","");
         url = url.replace("","");
 
 

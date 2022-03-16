@@ -59,8 +59,8 @@ public class NumOfEps {
             //getting a random episode number
             int eps = rnd.nextInt(number+1);
 
-            if (eps == 0 || eps == -1){ //Safety block
-                eps = eps + 2;
+            if (eps == 0 /*|| eps == -1*/){ //Safety block
+                eps = eps + 1;
             }
 
             //returning the selected episode number
