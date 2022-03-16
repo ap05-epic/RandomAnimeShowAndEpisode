@@ -17,6 +17,8 @@ public class urlMaker {
 
         String url = NameOfShow(EpisodeFinderM).toLowerCase(Locale.ROOT);
 
+
+        url = url.replace("2nd season","2");
         url = url.replace(": "," ");
         url = url.replace(" - "," ");
         url = url.replace("!","");
@@ -28,10 +30,9 @@ public class urlMaker {
         url = url.replace(" - ","");
         url = url.replace("."," ");
         url = url.replace("re-zero","rezero");
+        url = url.replace("  "," ");
         url = url.replace("","");
-        url = url.replace("","");
-        url = url.replace("","");
-        url = url.replace(" ","-");
+        url = url.replace(" ","-"); //main
         url = url.replace("IS--","");
         url = url.replace("?","");
         url = url.replace("","");
