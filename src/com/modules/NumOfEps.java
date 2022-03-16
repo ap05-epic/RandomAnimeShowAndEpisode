@@ -1,4 +1,4 @@
-package com.main;
+package com.modules;
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

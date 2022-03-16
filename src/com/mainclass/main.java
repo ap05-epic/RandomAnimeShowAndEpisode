@@ -2,17 +2,12 @@ package com.mainclass;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 
-import com.main.NumOfEps.*;
-import com.main.EpisodeFinder.*;
+import static com.modules.NumOfEps.*;
+import static com.modules.goToWebsite.opener;
+import static com.modules.urlMaker.URL;
 
-import static com.main.NumOfEps.*;
-import static com.main.allInstences.EpisodeFinderM;
-import static com.main.goToWebsite.opener;
-import static com.main.urlMaker.URL;
-
-import static com.main.EpisodeFinder.EpisodeFinder;
+import static com.modules.EpisodeFinder.EpisodeFinder;
 
 public class main {
     public static String EpisodeFinderM = EpisodeFinder();

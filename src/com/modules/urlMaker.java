@@ -1,11 +1,9 @@
-package com.main;
+package com.modules;
 
 import java.io.IOException;
 import java.util.Locale;
 
-import com.main.allInstences;
-import static com.main.allInstences.EpisodeFinderM;
-import static com.main.NumOfEps.*;
+import static com.modules.NumOfEps.*;
 import static com.mainclass.main.*;
 
 public class urlMaker {

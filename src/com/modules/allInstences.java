@@ -1,7 +1,6 @@
-package com.main;
+package com.modules;
 
-import static com.main.EpisodeFinder.EpisodeFinder;
-import static com.main.NumOfEps.randomEps;
+import static com.modules.EpisodeFinder.EpisodeFinder;
 
 public class allInstences {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.main;
+package com.modules;
 
 import java.awt.*;
 import java.io.IOException;
