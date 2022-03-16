@@ -1,4 +1,4 @@
-package com.mainclass;
+package com.mainClass;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

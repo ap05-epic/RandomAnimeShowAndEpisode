@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Locale;
 
 import static com.modules.NumOfEps.*;
-import static com.mainclass.main.*;
+import static com.mainClass.main.*;
 
 public class urlMaker {
     public static void main(String[] args) throws IOException {
