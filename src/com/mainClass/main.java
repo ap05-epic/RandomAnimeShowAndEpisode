@@ -8,6 +8,7 @@ import static com.modules.goToWebsite.opener;
 import static com.modules.urlMaker.URL;
 
 import static com.modules.EpisodeFinder.EpisodeFinder;
+import static java.lang.System.exit;
 
 public class main {
     public static String EpisodeFinderM = EpisodeFinder();
@@ -29,7 +30,7 @@ public class main {
         System.out.println("\nNow opening episode: " + randomEpsN + "/" + NumOfEps(EpisodeFinderM) /*+  " in 5 seconds)"*/);
         Thread.sleep(5000);
         opener(URL());
-
+        exit(69);
 
     }
 }

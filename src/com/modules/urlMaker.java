@@ -31,11 +31,27 @@ public class urlMaker {
         url = url.replace("."," ");
         url = url.replace("re-zero","rezero");
         url = url.replace("  "," ");
+        url = url.replace("(","");
+        url = url.replace(")","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
         url = url.replace("","");
         url = url.replace(" ","-"); //main
         url = url.replace("IS--","");
         url = url.replace("?","");
+        url = url.replace("re-zero","rezero");
         url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+        url = url.replace("","");
+
+
 
 
         //all this above is for weird scenarios
