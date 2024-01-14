@@ -1,5 +1,6 @@
 package com.mainClass;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
@@ -11,7 +12,18 @@ import static com.modules.EpisodeFinder.EpisodeFinder;
 import static java.lang.System.exit;
 
 public class main {
-    public static String EpisodeFinderM = EpisodeFinder();
+
+    public static String txtPath() {//PUT txt PATH ⌄
+        String path = "PATH/export.txt";//PUT txt PATH HERE
+        return path;//PUT txt PATH ^
+    }
+
+    public static String EpisodeFinderM;
+
+    static {
+        EpisodeFinderM = EpisodeFinder();
+    }
+
     public static int randomEpsN; static {
         try {
             randomEpsN = randomEps(NumOfEps(EpisodeFinderM));

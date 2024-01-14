@@ -2,9 +2,10 @@ package com.modules;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.NoSuchElementException;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+import com.mainClass.main.*;
+
+import static com.mainClass.main.txtPath;
 
 public class EpisodeFinder {
 
@@ -28,13 +29,11 @@ public class EpisodeFinder {
 
     //Giving a random link from the text file
     public static String EpisodeFinder(){
-
-        String[] eps = epsList("watched.txt");
+        String path = txtPath();
+        String[] eps = epsList(path); // PUT LIST PATH HERE!!!!
         int result = new Random().nextInt(eps.length);
         return eps[result];
-
     }
-
 
 
 
@@ -43,30 +42,49 @@ public class EpisodeFinder {
     public static String[] epsList(String file){
 
         int ctr = 0; //Starting to find the amount of lines
+
+        List<String> validLinks = new ArrayList<>(); // List to store valid links
         try {
-            File f = new File(file); //calling text file
-            Scanner scf = new Scanner(f);
+            Scanner scf = new Scanner(new File(file));
+            // Scanner to read the file
             while (scf.hasNextLine()){
-                ctr = ctr+1; //checking amount of lines
-                scf.nextLine();//Moving to next line to scan (without this we will be stuck)
+                String line = scf.nextLine(); // Read the next line
+                if (line.startsWith("https://myanimelist.net")){
+                    validLinks.add(line); // Add only if it starts with the specified string
+                }
             }
-
-            String[] eps = new String[ctr]; //initialising new array with already counted lines "ctr"
-
-            Scanner scf2 = new Scanner(new File(file)); //reinstating all links
-            for (int i = 0; i < ctr; i = i + 1){
-                eps[i] = scf2.next(); //storing links into "eps" array
-            }
-            //returning the link/website of the show
-            return eps;
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
-        return null;
+        // Convert the list to an array
+        String[] eps = new String[validLinks.size()];
+        eps = validLinks.toArray(eps);
 
+        return eps;
     }
+
+    //File f = new File(file); //calling text file
+    //Scanner scf = new Scanner(f);
+    //while (scf.hasNextLine()){
+    //    ctr = ctr+1; //checking amount of lines
+    //    scf.nextLine();//Moving to next line to scan (without this we will be stuck)
+    //}
+
+    //String[] eps = new String[ctr]; //initialising new array with already counted lines "ctr"
+
+
+    //Scanner scf2 = new Scanner(new File(file)); //reinstating all links
+    //while (scf.hasNextLine()) {
+    //    String line = scf.nextLine();
+    //    if (line.startsWith("https://myanimelist.net/anime")) {
+    //        eps ???
+    //    }
+    //for (int i = 0; i < ctr; i = i + 1){
+    //    eps[i] = scf2.next(); //storing links into "eps" array
+    //}
+    //returning the link/website of the show
+
 
 
 

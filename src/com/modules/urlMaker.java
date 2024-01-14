@@ -44,8 +44,8 @@ public class urlMaker {
         url = url.replace("IS--","");
         url = url.replace("?","");
         url = url.replace("re-zero","rezero");
-        url = url.replace("","");
-        url = url.replace("","");
+        url = url.replace("hangyaku","lelouch");
+        url = url.replace("2nd-season","2-part-2");
         url = url.replace("","");
         url = url.replace("","");
         url = url.replace("","");
@@ -66,7 +66,7 @@ public class urlMaker {
           but to know how many episodes there are it needs the website so it can retrieve the
           number of episodes to then display a random episode in terms of a link that can be used
         */
-        url = "https://gogoanime.fi/" + url + "-episode-" + randomEpsN;
+        url = "https://anitaku.to/" + url + "-episode-" + randomEpsN;
 
         //System.out.println(randomEpsM());
         //System.out.println(randomEpsM());
